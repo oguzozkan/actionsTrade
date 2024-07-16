@@ -6,6 +6,7 @@ import sanctumTrade from './sanctum/trade/route';
 import tensorBuyFloor from './tensor/buy-floor/route';
 import tensorBidNft from './tensor/bid-nft/route';
 import meteoraSwap from './meteora/swap/route';
+import randomBuy from "./random/route';
 import { cors } from 'hono/cors';
 import { swaggerUI } from '@hono/swagger-ui';
 import { OpenAPIHono } from '@hono/zod-openapi';
@@ -21,6 +22,7 @@ app.route('/api/sanctum/trade', sanctumTrade);
 app.route('/api/tensor/buy-floor', tensorBuyFloor);
 app.route('/api/tensor/bid-nft', tensorBidNft);
 app.route('/api/meteora/swap', meteoraSwap);
+app.route('/api/random/luck', randomBuy);
 // </--Actions-->
 
 app.doc('/doc', {
